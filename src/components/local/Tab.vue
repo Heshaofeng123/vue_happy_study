@@ -2,7 +2,7 @@
   <div class="tab">
     <div :class="{'active': activeIndex === 0}" @click="selectTab(0)">
       <img :src="tabSrc.one">
-      <span>发现</span>
+      <span>淘课</span>
     </div>
     <div :class="{'active': activeIndex === 1}" @click="selectTab(1)">
       <img :src="tabSrc.two">
