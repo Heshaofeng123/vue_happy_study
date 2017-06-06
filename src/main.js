@@ -7,11 +7,6 @@ import Store from './store'
 
 Vue.config.productionTip = false;
 
-//引入original组件
-import {ColumnGroup, ColumnItem} from './components/original/Column';
-Vue.component(ColumnGroup.name, ColumnGroup);
-Vue.component(ColumnItem.name, ColumnItem);
-
 //引入vendor组件
 import {Slider, SliderItem} from './components/vendor/slider';
 Vue.component(Slider.name, Slider);
