@@ -1,0 +1,83 @@
+.hc-column-group {
+  padding: 0 .3rem;
+  background-color: #fff;
+
+  .hc-column-title {
+    height: 1.04rem;
+    .title {
+      float: left;
+      font-size: .32rem; font-weight: 700;
+      line-height: 1.04rem;
+      color: #333333;
+    }
+    .more {
+      float: right;
+      padding-right: .26rem;
+      font-size: .24rem;
+      line-height: 1.04rem;
+      color: #999999;
+      background: url(../../../assets/i/i-arrow-right.png) no-repeat right center;
+      background-size: auto .26rem;
+    }
+  }
+  .hc-column-item {
+    height: 2.14rem;
+    margin-bottom: .34rem;
+    border-bottom: 1px solid #f0f0f0;
+    &:last-child {
+      border-bottom: none;
+    }
+    .hc-column-left {
+      float: left;
+      width: 4.3rem;
+      .title {
+        width: 4.3rem;
+        padding-top: .02rem;
+        font-size: .32rem; line-height: .32rem;
+        text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+        color: #333333;
+      }
+      .des {
+        height: .88rem;
+        padding-top: .14rem;
+        font-size: .24rem;
+        line-height: .36rem;
+        text-overflow: ellipsis; overflow: hidden;
+        color: #999999;
+      }
+      .ft {
+        height: .24rem;
+        padding-top: .2rem;
+        span {
+          font-size: .24rem;
+          line-height: .24rem;
+          color: #999999;
+        }
+        .s1 {
+          float: left;
+        }
+        .s2 {
+          float: right;
+        }
+      }
+    }
+    .hc-column-right {
+      float: right;
+      position: relative;
+      img {
+        position: relative; z-index: 1;
+        width: 2.4rem; height: 1.8rem;
+      }
+      .timer {
+        position: absolute; bottom: 0; left: 0; z-index: 2;
+        width: .8rem; height: .4rem;
+        font-size: .2rem;
+        line-height: .4rem;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.4)
+      }
+    }
+  }
+
+}
