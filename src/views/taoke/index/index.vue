@@ -7,7 +7,16 @@
         </yd-slider-item>
     </yd-slider>
 
-    <column-group title="乐学习·推荐" link="https://www.baidu.com/" class="mt32">
+    <div class="swiper-container-1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">企业文化</div>
+        <div class="swiper-slide">领导力</div>
+        <div class="swiper-slide">专业力</div>
+        <div class="swiper-slide">执行力</div>
+      </div>
+    </div>
+
+    <column-group title="乐学习·推荐" link="https://www.baidu.com/">
       <column-item v-for="(item, index) in columnList" @click.native="detailsGo(item.id)"
         :title="item.title"
         :des="item.des"
@@ -34,10 +43,31 @@
 
 <style lang="less">
   @import "./index.less";
+
+  .swiper-container-1 {
+    width: 100%;
+    height: 100px;
+    .swiper-wrapper {
+      padding-top: 15px;
+      .swiper-slide {
+        width: 35%;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background: #888800;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+  
 </style>
 
 <script type="text/babel">
 import {ColumnGroup, ColumnItem} from '@/components/original/Column'
+import Swiper from '@/../static/js/swiper.min.js'
+require('@/../static/css/swiper.min.css')
 
 export default {
   components: {
@@ -121,6 +151,12 @@ export default {
   },
   mounted() {
     this.fetchHomeInitData();
+
+    var mySwiper_1 = new Swiper('.swiper-container-1', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      spaceBetween: 15
+    })
   },
   methods: {
     fetchHomeInitData() {
