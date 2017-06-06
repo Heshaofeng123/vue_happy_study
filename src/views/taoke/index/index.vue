@@ -37,7 +37,6 @@
 </style>
 
 <script type="text/babel">
-
 import {ColumnGroup, ColumnItem} from '@/components/original/Column'
 
 export default {
