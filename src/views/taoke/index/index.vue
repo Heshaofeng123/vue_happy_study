@@ -129,21 +129,7 @@ export default {
       setTimeout(() => {
           this.$dialog.loading.close();
       }, 2000);
-    },
-    mounted() {
-      this.fetchHomeInitData();
-    },
-    methods: {
-      fetchHomeInitData() {
-        this.$dialog.loading.open('正在加载...');
-
-        setTimeout(() => {
-            this.$dialog.loading.close();
-        }, 2000);
-      },
-      detailsGo(id) {
-        this.$dialog.alert({mes: '你点击了 Vedio ID: '+id+' 的视频', timeout: 1000});
-      }
     }
   }
+}
 </script>
