@@ -3,8 +3,8 @@
     <div class="left">全集团</div>
     <div class="area_select">广深区域\/</div>
     <div class="right">
-      <img src="../../assets/logo.png">
-      <img src="../../assets/logo.png">
+      <img src="static/i/favicon.png">
+      <img src="static/i/favicon.png">
     </div>
   </div>
 </template>

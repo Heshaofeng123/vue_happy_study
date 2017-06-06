@@ -7,37 +7,42 @@
         </yd-slider-item>
     </yd-slider>
 
-    <hc-column-group title="乐学习·推荐" link="https://www.baidu.com/" class="mt32">
-      <hc-column-item v-for="(item, index) in columnList" @click.native="detailsGo(item.id)"
+    <column-group title="乐学习·推荐" link="https://www.baidu.com/" class="mt32">
+      <column-item v-for="(item, index) in columnList" @click.native="detailsGo(item.id)"
         :title="item.title"
         :des="item.des"
         :count="item.count"
         :points="item.points"
         :src="item.src"
         :timer="item.timer">
-      </hc-column-item>
-    </hc-column-group>
+      </column-item>
+    </column-group>
 
-    <hc-column-group title="乐学习·热门" link="https://www.baidu.com/">
-      <hc-column-item v-for="(item, index) in columnList2" @click.native="detailsGo(item.id)"
+    <column-group title="乐学习·热门" link="https://www.baidu.com/">
+      <column-item v-for="(item, index) in columnList2" @click.native="detailsGo(item.id)"
         :title="item.title"
         :des="item.des"
         :count="item.count"
         :points="item.points"
         :src="item.src"
         :timer="item.timer">
-      </hc-column-item>
-    </hc-column-group>
+      </column-item>
+    </column-group>
 
   </section>
 </template>
 
 <style lang="less">
-  @import "./Home.less";
+  @import "./index.less";
 </style>
 
 <script type="text/babel">
+import {ColumnGroup, ColumnItem} from '@/components/original/Column'
+
 export default {
+  components: {
+    ColumnGroup, ColumnItem
+  },
   data() {
     return {
       bannerList: [
