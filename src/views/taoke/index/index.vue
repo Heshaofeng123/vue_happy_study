@@ -46,22 +46,20 @@
 
   .swiper-container-1 {
     width: 100%;
-    height: 100px;
+    height: 90px;
     .swiper-wrapper {
       padding-top: 15px;
       .swiper-slide {
-        width: 35%;
-        height: 70px;
-        line-height: 70px;
+        width: 28%;
+        height: 60px;
+        line-height: 60px;
         text-align: center;
         background: #888800;
         border-radius: 3px;
         color: #fff;
-        font-weight: bold;
       }
     }
   }
-  
 </style>
 
 <script type="text/babel">
@@ -155,7 +153,7 @@ export default {
     var mySwiper_1 = new Swiper('.swiper-container-1', {
       direction: 'horizontal',
       slidesPerView: 'auto',
-      spaceBetween: 15
+      spaceBetween: 10
     })
   },
   methods: {
