@@ -1,9 +1,13 @@
 <template>
   <div class="index_header">
-    <div class="left">全集团</div>
-    <div class="area_select">广深区域\/</div>
-    <div class="right">
+    <div class="left">
       <img src="static/i/favicon.png">
+    </div>
+    <div class="area_select">
+      <span class="description">全集团</span>
+      <span class="selection">广深区域\/</span>
+    </div>
+    <div class="right">
       <img src="static/i/favicon.png">
     </div>
   </div>
@@ -25,6 +29,9 @@
     width: 100%;
     height: 34px;
     line-height: 34px;
+    z-index: 999;
+    background: #ffffff;
+
     &:after{
       content: "";
       position: absolute;
@@ -34,17 +41,35 @@
       height: 1px;
       background: #dddddd;
     }
-    z-index: 999;
-    background: #ffffff;
-    clear: both;
+    
     .left {
       display: inline-block;
-      margin-left: 8px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: 6px;
+      margin-left: 12px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
     }
+
     .area_select {
       display: inline-block;
-      margin-left: 12px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -30%;
+      height: 34px;
+      line-height: 34px;
+      .description {
+      }
+      .selection {
+        margin-left: 22px;
+      }
     }
+
     .right {
       display: inline-block;
       position: absolute;
@@ -52,10 +77,10 @@
       top: 0;
       margin-top: 6px;
       margin-right: 12px;
+
       img {
         width: 20px;
         height: 20px;
-        margin-left: 12px;
       }
     }
   }

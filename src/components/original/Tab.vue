@@ -21,8 +21,8 @@
     computed: {
       tabSrc () {
         return {
-          one: this.activeIndex === 0 ? 'static/images/icon/11.jpg' : 'static/images/icon/01.jpg',
-          two: this.activeIndex === 1 ? 'static/images/icon/12.jpg' : 'static/images/icon/02.jpg'
+          one: this.activeIndex === 0 ? 'static/i/11.jpg' : 'static/i/01.jpg',
+          two: this.activeIndex === 1 ? 'static/i/12.jpg' : 'static/i/02.jpg'
         }
       }
     },
@@ -66,10 +66,11 @@
       height: 54px;
       float: left;
       text-align: center;
+      padding-top: 9px;
       img{
         width: 25px;
         height: 25px;
-        margin-top: 9px;
+        margin: auto;
       }
       span{
         font-size: 11px;
