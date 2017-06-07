@@ -11,8 +11,8 @@
 </template>
 
 <script type="text/babel">
-  import IndexHeader from './components/original/IndexHeader'
-  import Tab from './components/original/Tab'
+  import IndexHeader from '@/components/original/IndexHeader'
+  import Tab from '@/components/original/Tab'
 
   export default {
     data () {
