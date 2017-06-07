@@ -21,8 +21,8 @@
     computed: {
       tabSrc () {
         return {
-          one: this.activeIndex === 0 ? 'static/i/11.jpg' : 'static/i/01.jpg',
-          two: this.activeIndex === 1 ? 'static/i/12.jpg' : 'static/i/02.jpg'
+          one: this.activeIndex === 0 ? 'static/i/11.png' : 'static/i/01.jpg',
+          two: this.activeIndex === 1 ? 'static/i/12.jpg' : 'static/i/02.png'
         }
       }
     },
@@ -59,7 +59,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      background: #dddddd;
+      background: #f0f0f0;
     }
     div {
       width: 50%;
@@ -79,7 +79,7 @@
     }
     div.active {
       span {
-        color: orange;
+        color: #0066CC;
       }
     }
   }

@@ -11,8 +11,8 @@
 </template>
 
 <script type="text/babel">
-  import IndexHeader from './components/original/IndexHeader'
-  import Tab from './components/original/Tab'
+  import IndexHeader from '@/components/original/IndexHeader'
+  import Tab from '@/components/original/Tab'
 
   export default {
     data () {
@@ -33,7 +33,7 @@
     height: 100%;
     .main {
       position: absolute;
-      top: 34px;
+      top: 48px;
       bottom: 54px;
       overflow-x: hidden;
       overflow-y: scroll;
