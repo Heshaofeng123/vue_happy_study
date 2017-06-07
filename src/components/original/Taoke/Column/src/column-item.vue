@@ -30,7 +30,7 @@
 </script>
 
 <style lang="less">
-    @import '../../../../styles/components/original/column.less';
+    @import '../../../../../styles/components/original/Taoke/column.less';
 </style>
 
 

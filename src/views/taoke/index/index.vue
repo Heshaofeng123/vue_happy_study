@@ -63,13 +63,14 @@
 </style>
 
 <script type="text/babel">
-import {ColumnGroup, ColumnItem} from '@/components/original/Column'
+import {ColumnGroup, ColumnItem} from '@/components/original/Taoke/Column'
 import Swiper from '@/../static/js/swiper.min.js'
 require('@/../static/css/swiper.min.css')
 
 export default {
   components: {
-    ColumnGroup, ColumnItem
+    ColumnGroup,
+    ColumnItem,
   },
   data() {
     return {
