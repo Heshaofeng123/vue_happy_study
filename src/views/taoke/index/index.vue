@@ -38,6 +38,25 @@
       </column-item>
     </column-group>
 
+    <column-group title="培训专栏" link="https://www.baidu.com/" style="background:#f5f5f5;margin-bottom:.32rem;">
+      <div class="swiper-container-2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(item, index) in trainColumn">
+            <div class="train_column">
+              <img :src="item.imgSrc">
+              <div class="train_column_main">
+                <p><span>{{item.title}}</span><span>{{item.subsubtime}}</span></p>
+                <p>万科大讲堂第{{item.current}}期</p>
+                <p>{{item.address}}</p>
+                <p>{{item.dateToDate}}</p>
+                <div class="train_column_button">查看全部{{item.count}}期</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </column-group>
+
   </section>
 </template>
 
@@ -57,6 +76,23 @@
         background: #888800;
         border-radius: 3px;
         color: #fff;
+      }
+    }
+  }
+
+  .swiper-container-2 {
+    width: 100%;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 240px;
+        .train_column {
+          height: 240px;
+          background: #fff;
+          img {
+            width: 240px;
+            height: 100px;
+          }
+        }
       }
     }
   }
@@ -144,16 +180,60 @@ export default {
           src: "static/img/vanke-2.jpg",
           timer: "99:99"
         }
+      ],
+      trainColumn: [
+        {
+          title: '一个人的长征',
+          subsubtime: '倒计时2天',
+          address: '集团总部·万科国际会议中心',
+          dateToDate: '2017.5.20-2017.5.27',
+          count: '3',
+          current: '1',
+          imgSrc: 'static/img/001.jpeg'
+        },
+        {
+          title: '岁月的洗礼',
+          subsubtime: '倒计时2天',
+          address: '深圳地产·万科国际会议中心',
+          dateToDate: '2017.5.27-2017.6.24',
+          count: '3',
+          current: '1',
+          imgSrc: 'static/img/003.jpg'
+        },
+        {
+          title: '一个人的长征',
+          subsubtime: '倒计时2天',
+          address: '集团总部·万科国际会议中心',
+          dateToDate: '2017.5.20-2017.5.27',
+          count: '3',
+          current: '1',
+          imgSrc: 'static/img/001.jpeg'
+        },
+        {
+          title: '岁月的洗礼',
+          subsubtime: '倒计时2天',
+          address: '深圳地产·万科国际会议中心',
+          dateToDate: '2017.5.27-2017.6.24',
+          count: '3',
+          current: '1',
+          imgSrc: 'static/img/003.jpg'
+        }
       ]
     }
   },
   mounted() {
     this.fetchHomeInitData();
 
-    var mySwiper_1 = new Swiper('.swiper-container-1', {
+    let mySwiper_1 = new Swiper('.swiper-container-1', {
       direction: 'horizontal',
       slidesPerView: 'auto',
       spaceBetween: 10
+    })
+
+    let mySwiper_2 = new Swiper('.swiper-container-2', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      spaceBetween: 15
     })
   },
   methods: {
@@ -162,7 +242,7 @@ export default {
 
       setTimeout(() => {
           this.$dialog.loading.close();
-      }, 2000);
+      }, 1000);
     }
   }
 }

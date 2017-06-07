@@ -4,8 +4,8 @@
       <img src="static/i/search.png" @click="gotoSearch">
     </div>
     <div class="area_select">
-      <span class="description">全集团</span>
-      <span class="selection">广深区域</span>
+      <span class="description" @click="allGroup">全集团</span>
+      <span class="selection" @click="selectedArea">广深区域</span>
     </div>
     <div class="right">
       <img src="static/i/qr.png" @click="qrCode">
@@ -25,6 +25,12 @@
       },
       qrCode () {
         console.log('location: "/qrCode"')
+      },
+      allGroup (ev) {
+        console.log(ev.target)
+      },
+      selectedArea (ev) {
+        console.log(ev.target)
       }
     }
   }
@@ -73,9 +79,17 @@
       line-height: 48px;
       font-size: 18px;
       .description {
+        color: #555;
+      }
+      .description.active {
+        color: #0066CC;
       }
       .selection {
         margin-left: 28px;
+        color: #555;
+      }
+      .selection.active {
+        color: #0066CC;
       }
     }
 
