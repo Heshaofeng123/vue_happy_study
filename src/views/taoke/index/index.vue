@@ -7,12 +7,14 @@
         </yd-slider-item>
     </yd-slider>
 
-    <div class="swiper-container-1">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">企业文化</div>
-        <div class="swiper-slide">领导力</div>
-        <div class="swiper-slide">专业力</div>
-        <div class="swiper-slide">执行力</div>
+    <div class="first_swiper">
+      <div class="swiper-container-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">企业文化</div>
+          <div class="swiper-slide">领导力</div>
+          <div class="swiper-slide">专业力</div>
+          <div class="swiper-slide">执行力</div>
+        </div>
       </div>
     </div>
 
@@ -45,9 +47,9 @@
             <div class="train_column">
               <img :src="item.imgSrc">
               <div class="train_column_main">
-                <p><span>{{item.title}}</span><span>{{item.subsubtime}}</span></p>
+                <p><span class="train_column_title">{{item.title}}</span><span class="train_column_subsubtime">{{item.subsubtime}}</span></p>
                 <p>万科大讲堂第{{item.current}}期</p>
-                <p>{{item.address}}</p>
+                <p class="address">{{item.address}}</p>
                 <p>{{item.dateToDate}}</p>
                 <div class="train_column_button">查看全部{{item.count}}期</div>
               </div>
@@ -63,19 +65,22 @@
 <style lang="less">
   @import "./index.less";
 
-  .swiper-container-1 {
-    width: 100%;
-    height: 90px;
-    .swiper-wrapper {
-      padding-top: 15px;
-      .swiper-slide {
-        width: 28%;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-        background: #888800;
-        border-radius: 3px;
-        color: #fff;
+  .first_swiper {
+    width: 100%; padding-left:.24rem;padding-right:.24rem;
+    .swiper-container-1 {
+      width: 100%;
+      height: 90px;
+      .swiper-wrapper {
+        padding-top: 15px;
+        .swiper-slide {
+          width: 28%;
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          background: #888800;
+          border-radius: 3px;
+          color: #fff;
+        }
       }
     }
   }
@@ -84,13 +89,51 @@
     width: 100%;
     .swiper-wrapper {
       .swiper-slide {
-        width: 240px;
+        width: 4.8rem;
+        border-radius: .08rem!important;
         .train_column {
-          height: 240px;
+          height: 4.8rem;
           background: #fff;
           img {
-            width: 240px;
-            height: 100px;
+            width: 4.8rem;
+            height: 1.76rem;
+          }
+          .train_column_main {
+            p {
+              font-size: .24rem;
+              color: #666;
+              margin-top: .2rem;
+              margin-left: .2rem;
+              clear: both;
+              overflow: hidden;
+            }
+            .train_column_title {
+              float: left;
+              font-size: .3rem;
+              color: #000;
+            }
+            .train_column_subsubtime {
+              float: right;
+              font-size: .24rem;
+              margin-right: .2rem;
+            }
+            .address {
+              color: #000;
+            }
+            .train_column_button {
+              width: 80%;
+              height: 0.6rem;
+              line-height: 0.6rem;
+              border: 1px solid #0066CC;
+              overflow: hidden;
+              margin: 0 auto;
+              text-align: center;
+              border-radius: .05rem;
+              font-size: .28rem;
+              color: #0066CC;
+              font-weight: bold;
+              margin-top: .2rem;
+            }
           }
         }
       }
