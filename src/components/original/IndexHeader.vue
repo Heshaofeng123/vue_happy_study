@@ -1,14 +1,14 @@
 <template>
   <div class="index_header">
     <div class="left">
-      <img src="static/i/search.png">
+      <img src="static/i/search.png" @click="gotoSearch">
     </div>
     <div class="area_select">
       <span class="description">全集团</span>
       <span class="selection">广深区域</span>
     </div>
     <div class="right">
-      <img src="static/i/qr.png">
+      <img src="static/i/qr.png" @click="qrCode">
     </div>
   </div>
 </template>
@@ -17,6 +17,15 @@
   export default {
     data () {
       return {}
+    },
+    methods: {
+      gotoSearch () {
+        console.log('location: "/search"')
+        this.$router.push('/search')
+      },
+      qrCode () {
+        console.log('location: "/qrCode"')
+      }
     }
   }
 </script>

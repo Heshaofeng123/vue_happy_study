@@ -33,7 +33,7 @@
     height: 100%;
     .main {
       position: absolute;
-      top: 34px;
+      top: 48px;
       bottom: 54px;
       overflow-x: hidden;
       overflow-y: scroll;

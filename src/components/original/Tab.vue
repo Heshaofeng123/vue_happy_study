@@ -59,7 +59,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      background: #dddddd;
+      background: #f0f0f0;
     }
     div {
       width: 50%;
