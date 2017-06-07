@@ -1,14 +1,14 @@
 <template>
   <div class="index_header">
     <div class="left">
-      <img src="static/i/favicon.png">
+      <img src="static/i/search.png">
     </div>
     <div class="area_select">
       <span class="description">全集团</span>
-      <span class="selection">广深区域\/</span>
+      <span class="selection">广深区域</span>
     </div>
     <div class="right">
-      <img src="static/i/favicon.png">
+      <img src="static/i/qr.png">
     </div>
   </div>
 </template>
@@ -27,8 +27,8 @@
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 34px;
-    line-height: 34px;
+    height: 48px;
+    line-height: 48px;
     z-index: 999;
     background: #ffffff;
 
@@ -39,7 +39,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      background: #dddddd;
+      background: #f0f0f0;
     }
     
     .left {
@@ -47,10 +47,9 @@
       position: absolute;
       left: 0;
       top: 0;
-      margin-top: 6px;
+      margin-top: 14px;
       margin-left: 12px;
       img {
-        width: 20px;
         height: 20px;
       }
     }
@@ -60,13 +59,14 @@
       position: absolute;
       top: 0;
       left: 50%;
-      margin-left: -30%;
-      height: 34px;
-      line-height: 34px;
+      margin-left: -22%;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
       .description {
       }
       .selection {
-        margin-left: 22px;
+        margin-left: 28px;
       }
     }
 
@@ -75,11 +75,10 @@
       position: absolute;
       right: 0;
       top: 0;
-      margin-top: 6px;
+      margin-top: 14px;
       margin-right: 12px;
 
       img {
-        width: 20px;
         height: 20px;
       }
     }
