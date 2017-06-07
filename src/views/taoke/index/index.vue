@@ -66,19 +66,22 @@
   @import "./index.less";
 
   .first_swiper {
-    width: 100%; padding-left:.24rem;padding-right:.24rem;
+    width: 100%;
+    height: 1.5rem;
+    padding-left: .25rem;
+    padding-right: .25rem;
     .swiper-container-1 {
       width: 100%;
-      height: 90px;
+      height: 1rem;
       .swiper-wrapper {
-        padding-top: 15px;
+        padding-top: .25rem;
         .swiper-slide {
-          width: 28%;
-          height: 60px;
-          line-height: 60px;
+          width: 2rem;
+          height: 1rem;
+          line-height: 1rem;
           text-align: center;
           background: #888800;
-          border-radius: 3px;
+          border-radius: .03rem !important;
           color: #fff;
         }
       }
