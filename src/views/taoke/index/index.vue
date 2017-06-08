@@ -40,7 +40,7 @@
       </column-item>
     </column-group>
 
-    <column-group title="培训专栏" link="https://www.baidu.com/" style="background:#f5f5f5;margin-bottom:.32rem;">
+    <column-group title="培训专栏" link="https://www.baidu.com/" style="background:#f5f5f5;margin-bottom:.32rem;margin-top:-.32rem;">
       <div class="swiper-container-2">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item, index) in trainColumn">
@@ -268,6 +268,15 @@ export default {
       ]
     }
   },
+  methods: {
+    fetchHomeInitData() {
+      this.$dialog.loading.open('正在加载...');
+
+      setTimeout(() => {
+          this.$dialog.loading.close();
+      }, 1000);
+    }
+  },
   mounted() {
     this.fetchHomeInitData();
 
@@ -282,15 +291,6 @@ export default {
       slidesPerView: 'auto',
       spaceBetween: 15
     })
-  },
-  methods: {
-    fetchHomeInitData() {
-      this.$dialog.loading.open('正在加载...');
-
-      setTimeout(() => {
-          this.$dialog.loading.close();
-      }, 1000);
-    }
   }
 }
 </script>

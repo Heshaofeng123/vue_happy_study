@@ -16,14 +16,17 @@
     <!-- built files will be auto injected -->
 
     <script src="./static/js/fastclick.js"></script>
+    <script src="./static/js/global.js"></script>
     <script>
       //判断移动端设备类型
       var ua = navigator.userAgent;
       var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;
       if(isAndroid) {
         document.getElementById("body").setAttribute('class','android');
+        CLIENTOSTYPE = 'android'
       }else {
         document.getElementById("body").setAttribute('class','ios');
+        CLIENTOSTYPE = 'ios'
       }
     </script>
   </body>
