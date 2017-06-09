@@ -4,8 +4,8 @@
       <img src="static/i/search.png" @click="gotoSearch">
     </div>
     <div class="area_select">
-      <span class="description" @click="allGroup">全集团</span>
-      <span class="selection" @click="selectedArea">广深区域</span>
+      <span class="description" @click="allGroup" :class="{'active': allGroupActive }">全集团</span>
+      <span class="selection" @click="selectedArea" :class="{'active': selectedAreaActive }">广深区域</span>
     </div>
     <div class="right">
       <img src="static/i/qr.png" @click="qrCode">
@@ -16,7 +16,10 @@
 <script>
   export default {
     data () {
-      return {}
+      return {
+        allGroupActive: true,
+        selectedAreaActive: false
+      }
     },
     methods: {
       gotoSearch () {
@@ -27,10 +30,12 @@
         console.log('location: "/qrCode"')
       },
       allGroup (ev) {
-        console.log(ev.target)
+        this.allGroupActive = true
+        this.selectedAreaActive = false
       },
       selectedArea (ev) {
-        console.log(ev.target)
+        this.selectedAreaActive = true
+        this.allGroupActive = false
       }
     }
   }
@@ -50,8 +55,8 @@
     &:after{
       content: "";
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: -1px;
+      left: 0px;
       width: 100%;
       height: 1px;
       background: #f0f0f0;
@@ -63,7 +68,7 @@
       left: 0;
       top: 0;
       margin-top: 14px;
-      margin-left: 12px;
+      margin-left: .26rem;
       img {
         height: 20px;
       }
@@ -75,21 +80,44 @@
       top: 0;
       left: 50%;
       margin-left: -22%;
-      height: 48px;
-      line-height: 48px;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 8px;
       font-size: 18px;
       .description {
-        color: #555;
+        color: #333333;
       }
       .description.active {
-        color: #0066CC;
+        color: #38acff;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          margin-left: -20%;
+          width: 40%;
+          height: 5px;
+          background: #38acff;
+        }
       }
       .selection {
         margin-left: 28px;
-        color: #555;
+        color: #333333;
       }
       .selection.active {
-        color: #0066CC;
+        color: #38acff;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          margin-left: -25%;
+          width: 50%;
+          height: 5px;
+          background: #38acff;
+        }
       }
     }
 
@@ -99,7 +127,7 @@
       right: 0;
       top: 0;
       margin-top: 14px;
-      margin-right: 12px;
+      margin-right: .26rem;
 
       img {
         height: 20px;
