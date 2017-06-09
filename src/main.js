@@ -3,7 +3,10 @@ import './styles/base.less';
 import Vue from 'vue'
 import App from './App'
 import Router from './router'
+import Resource from 'vue-resource'
 import Store from './store'
+
+Vue.use(Resource)
 
 Vue.config.productionTip = false;
 
