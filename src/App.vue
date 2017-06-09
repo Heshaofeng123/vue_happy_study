@@ -32,8 +32,8 @@
       userLogin(opt).then((res) => {
         console.log(res.data.body)
         if (res.data.state.errCode === 10000) {
-          this.$store.commit('setHttpHeadersToken', res.data.body.token)
-
+          this.$store.commit('setUserInfo', res.data.body)
+          
           let appendHttpHeaders = {
             account: '111',
             version: '1.0',
