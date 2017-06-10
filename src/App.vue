@@ -1,10 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" class="lexue-doc">
     <index-header></index-header>
     <div class="main">
-      <transition>
-        <router-view></router-view>
-      </transition>
+      <keep-alive>
+        <transition name="lexue" mode="out-in">
+          <router-view></router-view>
+        </transition>
+      </keep-alive>
     </div>
     <tab></tab>
   </div>
@@ -55,9 +57,16 @@
 <style lang="less">
   @import "./styles/common/common.less";
 
+  .lexue-enter-active, .lexue-leave-active {
+    transition: opacity .25s;
+  }
+  .lexue-enter, .lexue-leave-active {
+    opacity: 0;
+  }
+
   #app {
     position: relative;
-    width: 100%;
+    width: 7.5rem;
     height: 100%;
     .main {
       position: absolute;

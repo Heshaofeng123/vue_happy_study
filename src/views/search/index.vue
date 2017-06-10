@@ -1,5 +1,5 @@
 <template>
-  <div>Search Index</div>
+  <div class="search">Search Index</div>
 </template>
 
 <script></script>
