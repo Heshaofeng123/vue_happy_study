@@ -5,6 +5,7 @@ import Router from 'vue-router'
 const Taoke = r => require.ensure([], () => r(require('@/views/taoke/Taoke.vue')))
 const Me = r => require.ensure([], () => r(require('@/views/me/Me.vue')))
 const Search = r => require.ensure([], () => r(require('@/views/search/index.vue')))
+const TrainColumn = r => require.ensure([], () => r(require('@/views/trainColumn/TrainColumn.vue')))
 
 Vue.use(Router);
 
@@ -21,6 +22,10 @@ export default new Router({
     {
       path: '/search',
       component: Search
+    },
+    {
+      path: '/trainColumn',
+      component: TrainColumn
     },
     {
       path: '*',

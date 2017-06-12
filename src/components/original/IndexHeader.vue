@@ -92,7 +92,7 @@
           content: "";
           position: absolute;
           left: 50%;
-          bottom: -10px;
+          bottom: -6px;
           margin-left: -20%;
           width: 40%;
           height: 5px;
@@ -110,7 +110,7 @@
           content: "";
           position: absolute;
           left: 50%;
-          bottom: -10px;
+          bottom: -6px;
           margin-left: -25%;
           width: 50%;
           height: 5px;
