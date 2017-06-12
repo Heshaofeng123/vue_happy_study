@@ -1,5 +1,5 @@
 <template>
-  <section class="lexue-doc home">
+  <section class="home">
 
     <yd-slider autoplay="3000" class="banner">
         <yd-slider-item v-for="(item, index) in bannerList" @click.native="detailsGo(item.id)">

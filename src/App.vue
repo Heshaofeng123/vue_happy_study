@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="lexue-doc">
+  <div class="lexue-doc">
     <index-header></index-header>
     <div class="main">
       <keep-alive>
@@ -35,7 +35,7 @@
         console.log(res.data.body)
         if (res.data.state.errCode === 10000) {
           this.$store.commit('setUserInfo', res.data.body)
-          
+
           let appendHttpHeaders = {
             account: '111',
             version: '1.0',
@@ -56,24 +56,4 @@
 
 <style lang="less">
   @import "./styles/common/common.less";
-
-  .lexue-enter-active, .lexue-leave-active {
-    transition: opacity .25s;
-  }
-  .lexue-enter, .lexue-leave-active {
-    opacity: 0;
-  }
-
-  #app {
-    position: relative;
-    width: 7.5rem;
-    height: 100%;
-    .main {
-      position: absolute;
-      top: 48px;
-      bottom: 54px;
-      overflow-x: hidden;
-      overflow-y: scroll;
-    }
-  }
 </style>

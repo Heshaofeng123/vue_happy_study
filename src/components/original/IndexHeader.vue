@@ -1,15 +1,11 @@
 <template>
   <div class="index_header">
-    <div class="left">
-      <img src="static/i/search.png" @click="gotoSearch">
-    </div>
+    <div class="i-btn i-search" @click="gotoSearch"></div>
     <div class="area_select">
       <span class="description" @click="allGroup" :class="{'active': allGroupActive }">全集团</span>
       <span class="selection" @click="selectedArea" :class="{'active': selectedAreaActive }">广深区域</span>
     </div>
-    <div class="right">
-      <img src="static/i/qr.png" @click="qrCode">
-    </div>
+    <div class="i-btn i-qrCode" @click="qrCode"></div>
   </div>
 </template>
 
@@ -43,13 +39,13 @@
 
 <style lang="scss" scoped>
   .index_header {
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 48px;
+    height: .88rem;
     line-height: 48px;
-    z-index: 999;
+    z-index: 9;
     background: #ffffff;
 
     &:after{
@@ -61,16 +57,21 @@
       height: 1px;
       background: #f0f0f0;
     }
-    
-    .left {
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      margin-top: 14px;
-      margin-left: .26rem;
-      img {
-        height: 20px;
+
+    .i-btn {
+      position: absolute; top: 0; z-index: 2;
+      width: .92rem; height: .88rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      &.i-search {
+        left: 0;
+        background-image: url(../../assets/i/i-search.png);
+        background-size: .4rem auto;
+      }
+      &.i-qrCode {
+        right: 0;
+        background-image: url(../../assets/i/i-qrScan.png);
+        background-size: .4rem auto;
       }
     }
 
@@ -118,19 +119,6 @@
           height: 5px;
           background: #38acff;
         }
-      }
-    }
-
-    .right {
-      display: inline-block;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin-top: 14px;
-      margin-right: .26rem;
-
-      img {
-        height: 20px;
       }
     }
   }

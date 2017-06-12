@@ -44,42 +44,35 @@
 
 <style lang="scss" scoped>
   .tab {
-    width: 100%;
-    height: 54px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 999;
-    background: #ffffff;
+    width: 100%; height: 1rem;
+    position: fixed; bottom: 0; left: 0; z-index: 9;
+    background-color: #ffffff;
     clear: both;
     &:before{
       content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: #f0f0f0;
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 1px;
+      background-color: #f0f0f0;
     }
     div {
-      width: 50%;
-      height: 54px;
       float: left;
+      width: 50%;
       text-align: center;
-      padding-top: 9px;
+      padding-top: .12rem;
       img{
-        width: 25px;
-        height: 25px;
+        width: auto; height: .4rem;
         margin: auto;
       }
-      span{
-        font-size: 11px;
-        display: block;
+      span {
+        padding-top: .12rem;
+        font-size: .2rem;
+        line-height: .2rem;
+        color: #999999;
       }
     }
     div.active {
       span {
-        color: #0066CC;
+        color: #38acff;
       }
     }
   }
