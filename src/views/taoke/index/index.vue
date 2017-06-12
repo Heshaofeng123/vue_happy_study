@@ -59,89 +59,38 @@
       </div>
     </column-group>
 
+    <column-group title="大咖讲师" link="https://github.com">
+      <div class="swiper-container-3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="(item, index) in bigTeacher">
+            <div class="big_teacher">
+              <img :src="item.imgSrc">
+              <div class="big_teacher_main">
+                <p class="name">{{item.name}}</p>
+                <p class="desc">{{item.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </column-group>
+
+    <column-group title="爱分享" link="https://github.com">
+      <column-item v-for="(item, index) in iShare"
+        :title="item.title"
+        :des="item.des"
+        :count="item.count"
+        :points="item.points"
+        :src="item.src"
+        :timer="item.timer">
+      </column-item>
+    </column-group>
+
   </section>
 </template>
 
 <style lang="less">
   @import "./index.less";
-
-  .first_swiper {
-    width: 100%;
-    height: 1.5rem;
-    padding-left: .25rem;
-    padding-right: .25rem;
-    .swiper-container-1 {
-      width: 100%;
-      height: 1rem;
-      .swiper-wrapper {
-        padding-top: .25rem;
-        .swiper-slide {
-          width: 2rem;
-          height: 1rem;
-          line-height: 1rem;
-          text-align: center;
-          background: #888800;
-          border-radius: .03rem !important;
-          color: #fff;
-        }
-      }
-    }
-  }
-
-  .swiper-container-2 {
-    width: 100%;
-    .swiper-wrapper {
-      .swiper-slide {
-        width: 4.8rem;
-        border-radius: .08rem!important;
-        .train_column {
-          height: 4.8rem;
-          background: #fff;
-          img {
-            width: 4.8rem;
-            height: 1.76rem;
-          }
-          .train_column_main {
-            p {
-              font-size: .24rem;
-              color: #666;
-              margin-top: .2rem;
-              margin-left: .2rem;
-              clear: both;
-              overflow: hidden;
-            }
-            .train_column_title {
-              float: left;
-              font-size: .3rem;
-              color: #000;
-            }
-            .train_column_subsubtime {
-              float: right;
-              font-size: .24rem;
-              margin-right: .2rem;
-            }
-            .address {
-              color: #000;
-            }
-            .train_column_button {
-              width: 80%;
-              height: 0.6rem;
-              line-height: 0.6rem;
-              border: 1px solid #0066CC;
-              overflow: hidden;
-              margin: 0 auto;
-              text-align: center;
-              border-radius: .05rem;
-              font-size: .28rem;
-              color: #0066CC;
-              font-weight: bold;
-              margin-top: .2rem;
-            }
-          }
-        }
-      }
-    }
-  }
 </style>
 
 <script type="text/babel">
@@ -265,6 +214,77 @@ export default {
           current: '1',
           imgSrc: 'static/img/003.jpg'
         }
+      ],
+      bigTeacher: [
+        {
+          name: '吴恩达',
+          description: '人工智能时代的领航人',
+          imgSrc: 'static/img/vanke.jpg'
+        },
+        {
+          name: '马化腾',
+          description: '互联网从业者',
+          imgSrc: 'static/img/vanke.jpg'
+        },
+        {
+          name: '王健林',
+          description: '房地产大鳄',
+          imgSrc: 'static/img/vanke.jpg'
+        },
+        {
+          name: '潘石屹',
+          description: '我在北京盖房子',
+          imgSrc: 'static/img/vanke.jpg'
+        }
+      ],
+      topList: [
+        {
+          group: '好课榜',
+          imgSrc: 'static/img/vanke.jpg',
+          top: 'NO.1集团总部',
+          category: '精品课程'
+        },
+        {
+          group: '爱学榜',
+          imgSrc: 'static/img/vanke.jpg',
+          top: 'NO.1深圳地产',
+          category: '王牌精品课程'
+        },
+        {
+          group: '贡献榜',
+          imgSrc: 'static/img/vanke.jpg',
+          top: 'NO.1广州地产',
+          category: '全集团内的王牌精品课程'
+        }
+      ],
+      iShare: [
+        {
+          id: "c0011",
+          title: "测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2",
+          des: "学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践",
+          count: "8",
+          points: "9.9",
+          src: "static/img/001.jpeg",
+          timer: "99:99"
+        },
+        {
+          id: "c0012",
+          title: "测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2",
+          des: "学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践",
+          count: "8",
+          points: "9.9",
+          src: "static/img/001.jpeg",
+          timer: "99:99"
+        },
+        {
+          id: "c0013",
+          title: "测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2测试2",
+          des: "学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践学会书中的方法技巧并加以实践",
+          count: "8",
+          points: "9.9",
+          src: "static/img/001.jpeg",
+          timer: "99:99"
+        }
       ]
     }
   },
@@ -290,6 +310,12 @@ export default {
       direction: 'horizontal',
       slidesPerView: 'auto',
       spaceBetween: 15
+    })
+
+    let mySwiper_3 = new Swiper('.swiper-container-3', {
+      direction: 'horizontal',
+      slidesPerView: 'auto',
+      spaceBetween: 10
     })
   }
 }

@@ -1,9 +1,15 @@
 export default {
   state: {
-    userInfo: {}
+    userInfo: null
   },
-  mutations: {},
-  getters: {},
+  mutations: {
+    setUserInfo (state, userInfo) {
+      state.userInfo = userInfo
+    }
+  },
+  getters: {
+    userInfo: state => state.userInfo
+  },
   actions: {
   }
 }
