@@ -44,8 +44,9 @@
 
 <style lang="scss" scoped>
   .tab {
-    width: 100%; height: 1rem;
-    position: fixed; bottom: 0; left: 0; z-index: 9;
+    position: fixed; bottom: -1px; left: 50%; z-index: 9;
+    width: 7.5rem; height: 1rem;
+    margin-left: -3.75rem;
     background-color: #ffffff;
     clear: both;
     &:before{

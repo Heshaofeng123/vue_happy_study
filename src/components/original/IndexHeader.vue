@@ -39,14 +39,11 @@
 
 <style lang="scss" scoped>
   .index_header {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: .88rem;
+    position: fixed; left: 50%; top: 0; z-index: 9;
+    width: 7.5rem; height: .88rem;
+    margin-left: -3.75rem;
     line-height: 48px;
-    z-index: 9;
-    background: #ffffff;
+    background-color: #ffffff;
 
     &:after{
       content: "";
